@@ -3,3 +3,6 @@ run:
 
 build:
   cargo build --color always --message-format human
+
+clean:
+  cargo clean

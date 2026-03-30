@@ -12,7 +12,7 @@ fn main()
   // Load the QML path into the engine.
   if let Some(engine) = engine.as_mut()
   {
-    engine.load(&QUrl::from("qrc:/qt/qml/com/kdab/cxx_qt/demo/qml/Main.qml"));
+    engine.load(&QUrl::from("qrc:/qt/qml/my_qml_rs_app/qml/Main.qml"));
   }
 
   if let Some(engine) = engine.as_mut()

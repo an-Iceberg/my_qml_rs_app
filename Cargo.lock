@@ -335,22 +335,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79"
 
 [[package]]
-name = "proc-macro2"
-version = "1.0.106"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934"
-dependencies = [
- "unicode-ident",
-]
-
-[[package]]
-name = "qml_minimal"
+name = "my_qml_rs_app"
 version = "0.1.0"
 dependencies = [
  "cxx",
  "cxx-qt",
  "cxx-qt-build",
  "cxx-qt-lib",
+]
+
+[[package]]
+name = "proc-macro2"
+version = "1.0.106"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8fd00f0bb2e90d81d1044c2b32617f68fcb9fa3bb7640c23e9c748e53fb30934"
+dependencies = [
+ "unicode-ident",
 ]
 
 [[package]]

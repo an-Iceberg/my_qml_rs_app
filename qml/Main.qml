@@ -4,13 +4,14 @@ import QtQuick.Window 2.12
 
 // This must match the uri and version
 // specified in the qml_module in the build.rs script.
-import com.kdab.cxx_qt.demo 1.0
+import my_qml_rs_app 1.0
 
 ApplicationWindow
 {
   id: root
 
   height: 480
+  // What is qsTr: https://doc.qt.io/archives/qt-5.15/qtquick-internationalization.html
   title: qsTr("Hello World")
   visible: true
   width: 640
