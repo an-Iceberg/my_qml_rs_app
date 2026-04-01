@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.12
+import QtQuick.Layouts 2
 
 // This must match the uri and version
 // specified in the qml_module in the build.rs script.
@@ -16,28 +17,31 @@ ApplicationWindow
   visible: true
   width: 640
   color: palette.window
+  topPadding: 10
+  leftPadding: 10
+  bottomPadding: 10
+  rightPadding: 10
 
-  readonly property MyObject myObject: MyObject
+  readonly property MyObject bridge: MyObject
   {
     number: 1
     string: qsTr("My String with my number: %1").arg(number)
   }
 
-  Column
+  ColumnLayout
   {
-    anchors.fill: parent
-    anchors.margins: 10
+    width: parent.width
     spacing: 10
 
     Label
     {
-      text: qsTr("Number: %1").arg(root.myObject.number)
+      text: qsTr("Number: %1").arg(root.bridge.number)
       color: palette.text
     }
 
     Label
     {
-      text: qsTr("String: %1").arg(root.myObject.string)
+      text: qsTr("String: %1").arg(root.bridge.string)
       color: palette.text
     }
 
@@ -45,14 +49,14 @@ ApplicationWindow
     {
       text: qsTr("Increment Number")
 
-      onClicked: root.myObject.incrementNumber()
+      onClicked: root.bridge.incrementNumber()
     }
 
     Button
     {
       text: qsTr("Say Hi!")
 
-      onClicked: root.myObject.sayHi(root.myObject.string, root.myObject.number)
+      onClicked: root.bridge.sayHi(root.bridge.string, root.bridge.number)
     }
 
     Button
@@ -62,4 +66,44 @@ ApplicationWindow
       onClicked: Qt.quit()
     }
   }
+
+  // Column
+  // {
+  //   anchors.fill: parent
+  //   anchors.margins: 10
+  //   spacing: 10
+
+  //   Label
+  //   {
+  //     text: qsTr("Number: %1").arg(root.bridge.number)
+  //     color: palette.text
+  //   }
+
+  //   Label
+  //   {
+  //     text: qsTr("String: %1").arg(root.bridge.string)
+  //     color: palette.text
+  //   }
+
+  //   Button
+  //   {
+  //     text: qsTr("Increment Number")
+
+  //     onClicked: root.bridge.incrementNumber()
+  //   }
+
+  //   Button
+  //   {
+  //     text: qsTr("Say Hi!")
+
+  //     onClicked: root.bridge.sayHi(root.bridge.string, root.bridge.number)
+  //   }
+
+  //   Button
+  //   {
+  //     text: qsTr("Quit")
+
+  //     onClicked: Qt.quit()
+  //   }
+  // }
 }
