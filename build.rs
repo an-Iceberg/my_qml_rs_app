@@ -2,7 +2,15 @@ use cxx_qt_build::{CxxQtBuilder, QmlModule};
 
 fn main()
 {
-  CxxQtBuilder::new_qml_module(QmlModule::new("my_qml_rs_app").qml_file("qml/Main.qml"))
+  CxxQtBuilder::new_qml_module(
+    QmlModule::new("my_qml_rs_app")
+      .qml_files([
+        "qml/Main.qml",
+        "qml/IntField.qml",
+        "qml/FloatField.qml",
+        "qml/DatePicker.qml",
+      ])
+  )
     // Link Qt's Network library
     // - Qt Core is always linked
     // - Qt Gui is linked by enabling the qt_gui Cargo feature of cxx-qt-lib.

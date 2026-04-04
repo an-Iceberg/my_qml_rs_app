@@ -1,11 +1,11 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
-import QtQuick.Window 2.12
+import QtQuick 2
+import QtQuick.Controls 2
+import QtQuick.Window 2
 import QtQuick.Layouts 2
 
 // This must match the uri and version
 // specified in the qml_module in the build.rs script.
-import my_qml_rs_app 1.0
+import my_qml_rs_app 1
 
 ApplicationWindow
 {
@@ -65,45 +65,29 @@ ApplicationWindow
 
       onClicked: Qt.quit()
     }
+
+    TextField
+    {
+      text: "hello"
+      color: palette.text
+    }
+
+    RowLayout
+    {
+      Text { text: "IntField:"; color: palette.text }
+      IntField {}
+    }
+
+    RowLayout
+    {
+      Text { text: "FloatField:"; color: palette.text }
+      FloatField {}
+    }
+
+    RowLayout
+    {
+      Text { text: "DatePicker:"; color: palette.text }
+      DatePicker {}
+    }
   }
-
-  // Column
-  // {
-  //   anchors.fill: parent
-  //   anchors.margins: 10
-  //   spacing: 10
-
-  //   Label
-  //   {
-  //     text: qsTr("Number: %1").arg(root.bridge.number)
-  //     color: palette.text
-  //   }
-
-  //   Label
-  //   {
-  //     text: qsTr("String: %1").arg(root.bridge.string)
-  //     color: palette.text
-  //   }
-
-  //   Button
-  //   {
-  //     text: qsTr("Increment Number")
-
-  //     onClicked: root.bridge.incrementNumber()
-  //   }
-
-  //   Button
-  //   {
-  //     text: qsTr("Say Hi!")
-
-  //     onClicked: root.bridge.sayHi(root.bridge.string, root.bridge.number)
-  //   }
-
-  //   Button
-  //   {
-  //     text: qsTr("Quit")
-
-  //     onClicked: Qt.quit()
-  //   }
-  // }
 }

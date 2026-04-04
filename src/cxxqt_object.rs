@@ -41,6 +41,7 @@ pub struct MyObjectRust
 {
   number: i32,
   string: QString,
+  my_string: String,
 }
 
 impl qobject::MyObject
