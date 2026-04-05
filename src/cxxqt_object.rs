@@ -34,6 +34,7 @@ pub mod qobject
 
 use core::pin::Pin;
 use cxx_qt_lib::QString;
+use crate::backend::Backend;
 
 /// The Rust struct for the QObject
 #[derive(Default)]
@@ -41,7 +42,7 @@ pub struct MyObjectRust
 {
   number: i32,
   string: QString,
-  my_string: String,
+  backend: Backend
 }
 
 impl qobject::MyObject
