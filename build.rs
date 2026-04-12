@@ -6,8 +6,6 @@ fn main()
     QmlModule::new("my_qml_rs_app")
       .qml_files([
         "qml/Main.qml",
-        "qml/IntField.qml",
-        "qml/FloatField.qml",
         "qml/DatePicker.qml",
       ])
   )

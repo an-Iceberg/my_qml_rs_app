@@ -66,12 +66,43 @@ ApplicationWindow
       Layout.topMargin: 10
       Layout.bottomMargin: 10
 
+      // Accounts
+      // TODO: extract this to its own component
+
       Rectangle
       {
         Layout.preferredWidth: 80
         Layout.preferredHeight: 80
         Layout.alignment: Qt.AlignHCenter
-        color: "white"
+        color: "aquamarine"
+        radius: 10
+      }
+
+      Rectangle
+      {
+        Layout.preferredWidth: 80
+        Layout.preferredHeight: 80
+        Layout.alignment: Qt.AlignHCenter
+        color: "mediumpurple"
+        radius: 10
+      }
+
+      Rectangle
+      {
+        Layout.preferredWidth: 80
+        Layout.preferredHeight: 80
+        Layout.alignment: Qt.AlignHCenter
+        color: "lightsteelblue"
+        radius: 10
+      }
+
+      Rectangle
+      {
+        Layout.preferredWidth: 80
+        Layout.preferredHeight: 80
+        Layout.alignment: Qt.AlignHCenter
+        color: "lightskyblue"
+        radius: 10
       }
     }
 
@@ -97,6 +128,11 @@ ApplicationWindow
         Layout.fillWidth: true
         implicitHeight: 1
         color: palette.text
+      }
+
+      Frame
+      {
+        Text { text: "this is a frame"; color: palette.text }
       }
 
       Label
@@ -140,14 +176,24 @@ ApplicationWindow
 
       RowLayout
       {
-        Text { text: "IntField:"; color: palette.text }
-        IntField {}
+        Text { text: "Positive Int:"; color: palette.text }
+        TextField
+        {
+          color: palette.text
+          inputMethodHints: Qt.ImhDigitsOnly // This doesn't seem to do anything.
+          validator: IntValidator { bottom: 0 }
+        }
       }
 
       RowLayout
       {
-        Text { text: "FloatField:"; color: palette.text }
-        FloatField {}
+        Text { text: "Positive Double:"; color: palette.text }
+        TextField
+        {
+          color: palette.text
+          inputMethodHints: Qt.ImhFormattedNumbersOnly // This doesn't seem to do anything.
+          validator: DoubleValidator { bottom: 0; decimals: 5 }
+        }
       }
 
       RowLayout
@@ -156,7 +202,5 @@ ApplicationWindow
         DatePicker {}
       }
     }
-
   }
-
 }

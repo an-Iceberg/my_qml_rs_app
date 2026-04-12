@@ -16,17 +16,17 @@ fn main()
     engine.load(&QUrl::from("qrc:/qt/qml/my_qml_rs_app/qml/Main.qml"));
   }
 
-  if let Some(engine) = engine.as_mut()
-  {
-    let engine: Pin<&mut QQmlEngine> = engine.upcast_pin();
+  // if let Some(engine) = engine.as_mut()
+  // {
+  //   let engine: Pin<&mut QQmlEngine> = engine.upcast_pin();
 
-    // Listen to a signal from the QML engine.
-    engine.on_quit(|_|
-    {
-      println!("QML quit!") ;
-    })
-    .release();
-  }
+  //   // Listen to a signal from the QML engine.
+  //   engine.on_quit(|_|
+  //   {
+  //     println!("QML quit!") ;
+  //   })
+  //   .release();
+  // }
 
   // Start the app.
   if let Some(app) = app.as_mut() { app.exec(); }
