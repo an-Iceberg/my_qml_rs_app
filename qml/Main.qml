@@ -58,6 +58,7 @@ ApplicationWindow
   RowLayout
   {
     anchors.fill: parent
+    spacing: 0
 
     ColumnLayout
     {
@@ -120,6 +121,7 @@ ApplicationWindow
       Layout.fillWidth: true
       Layout.topMargin: 10
       Layout.bottomMargin: 10
+      Layout.leftMargin: 10
       spacing: 10
 
       // Separator
@@ -200,6 +202,12 @@ ApplicationWindow
       {
         Text { text: "DatePicker:"; color: palette.text }
         DatePicker {}
+      }
+
+      RowLayout
+      {
+        Text { text: "TimePicker:"; color: palette.text }
+        TimePicker {}
       }
     }
   }

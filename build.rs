@@ -7,6 +7,7 @@ fn main()
       .qml_files([
         "qml/Main.qml",
         "qml/DatePicker.qml",
+        "qml/TimePicker.qml",
       ])
   )
     // Link Qt's Network library
