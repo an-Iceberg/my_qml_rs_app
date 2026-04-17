@@ -8,6 +8,8 @@ fn main()
         "qml/Main.qml",
         "qml/DatePicker.qml",
         "qml/TimePicker.qml",
+        "qml/Accounts.qml",
+        "qml/Account.qml",
       ])
   )
     // Link Qt's Network library

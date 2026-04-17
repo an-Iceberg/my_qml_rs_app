@@ -6,27 +6,37 @@ import QtQuick.Layouts 2
 RowLayout
 {
   // Day
-  ComboBox
+  SpinBox
   {
-    Layout.preferredWidth: 60
-    model: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+    editable: false
+    from: 1
+    to: 31
+    stepSize: 1
+    wrap: true
   }
 
   Text { text: "."; color: palette.text }
 
   // Month
-  ComboBox
+  SpinBox
   {
-    Layout.preferredWidth: 60
-    model: [1,2,3,4,5,6,7,8,9,10,11,12]
+    editable: false
+    from: 1
+    to: 12
+    stepSize: 1
+    wrap: true
   }
 
   Text { text: "."; color: palette.text }
 
   // Year
-  ComboBox
+  SpinBox
   {
-    Layout.preferredWidth: 80
-    model: ["2024","2025","2026","2027","2028"]
+    editable: false
+    value: new Date().getFullYear()
+    from: new Date().getFullYear() - 100
+    to: new Date().getFullYear() + 100
+    stepSize: 1
+    wrap: true
   }
 }

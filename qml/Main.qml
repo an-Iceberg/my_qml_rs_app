@@ -10,11 +10,11 @@ import my_qml_rs_app 1
 ApplicationWindow
 {
   id: root
+  visible: true
 
-  height: 480
   // What is qsTr: https://doc.qt.io/archives/qt-5.15/qtquick-internationalization.html
   title: qsTr("Hello World")
-  visible: true
+  height: 480
   width: 640
   color: palette.window
   // topPadding: 10
@@ -60,52 +60,7 @@ ApplicationWindow
     anchors.fill: parent
     spacing: 0
 
-    ColumnLayout
-    {
-      Layout.alignment: Qt.AlignTop
-      Layout.maximumWidth: 100
-      Layout.topMargin: 10
-      Layout.bottomMargin: 10
-
-      // Accounts
-      // TODO: extract this to its own component
-
-      Rectangle
-      {
-        Layout.preferredWidth: 80
-        Layout.preferredHeight: 80
-        Layout.alignment: Qt.AlignHCenter
-        color: "aquamarine"
-        radius: 10
-      }
-
-      Rectangle
-      {
-        Layout.preferredWidth: 80
-        Layout.preferredHeight: 80
-        Layout.alignment: Qt.AlignHCenter
-        color: "mediumpurple"
-        radius: 10
-      }
-
-      Rectangle
-      {
-        Layout.preferredWidth: 80
-        Layout.preferredHeight: 80
-        Layout.alignment: Qt.AlignHCenter
-        color: "lightsteelblue"
-        radius: 10
-      }
-
-      Rectangle
-      {
-        Layout.preferredWidth: 80
-        Layout.preferredHeight: 80
-        Layout.alignment: Qt.AlignHCenter
-        color: "lightskyblue"
-        radius: 10
-      }
-    }
+    Accounts {}
 
     // Separator
     Rectangle
