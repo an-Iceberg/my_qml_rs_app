@@ -80,11 +80,13 @@ ApplicationWindow
 
     Flickable
     {
+      Layout.alignment: Qt.AlignTop
       Layout.preferredHeight: parent.height
       Layout.preferredWidth: content.width
       contentWidth: content.width
       contentHeight: content.height
-      ScrollBar.vertical: ScrollBar {
+      ScrollBar.vertical: ScrollBar
+      {
         parent: parent
         interactive: true
         anchors

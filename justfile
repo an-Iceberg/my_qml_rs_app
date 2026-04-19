@@ -1,13 +1,13 @@
-run:
+run-dev:
   cargo run --color always --message-format human
 
-build:
+build-dev:
   cargo build --color always --message-format human
 
-run-release:
+run:
   cargo run --release --color always --message-format human
 
-build-release:
+build:
   cargo build --release --color always --message-format human
 
 clean:

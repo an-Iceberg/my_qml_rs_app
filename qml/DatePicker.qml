@@ -5,6 +5,7 @@ import QtQuick.Layouts 2
 
 RowLayout
 {
+  // TODO: this isn't mobile friendly.
   // Day
   SpinBox
   {
