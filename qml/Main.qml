@@ -70,6 +70,83 @@ ApplicationWindow
       color: palette.text
     }
 
+    // Separator
+    Rectangle
+    {
+      Layout.fillHeight: true
+      implicitWidth: 1
+      color: palette.text
+    }
+
+    Flickable
+    {
+      Layout.preferredHeight: parent.height
+      Layout.preferredWidth: content.width
+      contentWidth: content.width
+      contentHeight: content.height
+      ScrollBar.vertical: ScrollBar {
+        parent: parent
+        interactive: true
+        anchors
+        {
+          top: parent.top
+          bottom: parent.bottom
+          right: parent.right
+        }
+      }
+
+      ColumnLayout
+      {
+        id: content
+
+        Text { text: "Flickable"; color: palette.text }
+        Text { text: "text 1"; color: palette.text }
+        Text { text: "text 2"; color: palette.text }
+        Text { text: "text 3"; color: palette.text }
+        Text { text: "text 4"; color: palette.text }
+        Text { text: "text 5"; color: palette.text }
+        Text { text: "text 6"; color: palette.text }
+        Text { text: "text 7"; color: palette.text }
+        Text { text: "text 8"; color: palette.text }
+        Text { text: "text 9"; color: palette.text }
+        Text { text: "text 10"; color: palette.text }
+        Text { text: "text 11"; color: palette.text }
+        Text { text: "text 12"; color: palette.text }
+        Text { text: "text 13"; color: palette.text }
+        Text { text: "text 14"; color: palette.text }
+        Text { text: "text 15"; color: palette.text }
+        Text { text: "text 16"; color: palette.text }
+        Text { text: "text 17"; color: palette.text }
+        Text { text: "text 18"; color: palette.text }
+        Text { text: "text 19"; color: palette.text }
+        Text { text: "text 20"; color: palette.text }
+        Text { text: "text 21"; color: palette.text }
+        Text { text: "text 22"; color: palette.text }
+        Text { text: "text 23"; color: palette.text }
+        Text { text: "text 24"; color: palette.text }
+        Text { text: "text 25"; color: palette.text }
+        Text { text: "text 26"; color: palette.text }
+        Text { text: "text 27"; color: palette.text }
+        Text { text: "text 28"; color: palette.text }
+        Text { text: "text 29"; color: palette.text }
+        Text { text: "text 30"; color: palette.text }
+        Text { text: "text 31"; color: palette.text }
+        Text { text: "text 32"; color: palette.text }
+        Text { text: "text 33"; color: palette.text }
+        Text { text: "text 34"; color: palette.text }
+        Text { text: "text 35"; color: palette.text }
+        Text { text: "text 36"; color: palette.text }
+      }
+    }
+
+    // Separator
+    Rectangle
+    {
+      Layout.fillHeight: true
+      implicitWidth: 1
+      color: palette.text
+    }
+
     ColumnLayout
     {
       Layout.alignment: Qt.AlignTop
