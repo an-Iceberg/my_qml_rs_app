@@ -1,40 +1,94 @@
-import QtQuick 2
-import QtQuick.Controls 2
-import QtQuick.Window 2
-import QtQuick.Layouts 2
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Window
+import QtQuick.Layouts
 
-ColumnLayout
+Flickable
 {
-  property int margin: 10
-  property int iconSize: 60
-  spacing: this.margin
-
   Layout.alignment: Qt.AlignTop
-  Layout.minimumWidth: this.iconSize + 2*(this.margin)
-  Layout.topMargin: this.margin
-  Layout.bottomMargin: this.margin
+  Layout.preferredHeight: parent.height
+  Layout.minimumWidth: content.iconSize + 2*(content.margin)
 
-  Account
+  topMargin: content.margin
+  bottomMargin: content.margin
+  leftMargin: content.margin
+  rightMargin: content.margin
+
+  contentHeight: content.height
+  contentWidth: -1 // This somehow disables horizontal flicking 🤷‍♀️
+
+  ScrollBar.vertical: ScrollBar
   {
-    size: parent.iconSize
-    color: "aquamarine"
+    parent: parent
+    interactive: true
+    anchors
+    {
+      top: parent.top
+      bottom: parent.bottom
+      right: parent.right
+    }
   }
 
-  Account
+  ColumnLayout
   {
-    size: parent.iconSize
-    color: "mediumpurple"
-  }
+    id: content
 
-  Account
-  {
-    size: parent.iconSize
-    color: "dodgerblue"
-  }
+    property int margin: 10
+    property int iconSize: 60
+    spacing: this.margin
 
-  Account
-  {
-    size: parent.iconSize
-    color: "lightskyblue"
+    Account
+    {
+      size: parent.iconSize
+      color: "aquamarine"
+    }
+
+    Account
+    {
+      size: parent.iconSize
+      color: "mediumpurple"
+    }
+
+    Account
+    {
+      size: parent.iconSize
+      color: "dodgerblue"
+    }
+
+    Account
+    {
+      size: parent.iconSize
+      color: "lightskyblue"
+    }
+
+    Account
+    {
+      size: parent.iconSize
+      color: "mediumorchid"
+    }
+
+    Account
+    {
+      size: parent.iconSize
+      color: "mediumvioletred"
+    }
+
+    Account
+    {
+      size: parent.iconSize
+      color: "orchid"
+    }
+
+    Account
+    {
+      size: parent.iconSize
+      color: "palevioletred"
+    }
+
+    Account
+    {
+      size: parent.iconSize
+      color: "salmon"
+    }
   }
 }
